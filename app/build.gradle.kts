@@ -23,6 +23,7 @@ android {
         versionName = "1.0"
 
         buildConfigField("String", "ACCESS_TOKEN", getApiKey())
+        buildConfigField("String", "BASE_URL", "\"https://api.foursquare.com/v3/places/\"")
 
         vectorDrawables {
             useSupportLibrary = true
