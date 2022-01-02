@@ -74,4 +74,7 @@ dependencies {
     // Hilt
     implementation("com.google.dagger:hilt-android:2.37")
     kapt("com.google.dagger:hilt-android-compiler:2.37")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 }
