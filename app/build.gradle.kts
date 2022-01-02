@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -6,6 +9,10 @@ plugins {
 }
 
 android {
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+    val keystoreProperties = Properties()
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
     compileSdk = 31
 
     defaultConfig {
@@ -14,6 +21,8 @@ android {
         targetSdk = 31
         versionCode = 1
         versionName = "1.0"
+
+        buildConfigField("String", "ACCESS_TOKEN", getApiKey())
 
         vectorDrawables {
             useSupportLibrary = true
@@ -57,7 +66,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.0.5")
     implementation("androidx.activity:activity-compose:1.4.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0-rc01")
-    implementation("androidx.compose.runtime:runtime-livedata:1.1.0-rc03")
+    implementation("androidx.compose.runtime:runtime-livedata:1.1.0-rc01")
     implementation("androidx.compose.ui:ui-tooling:1.0.5")
 
     // Navigation
@@ -82,4 +91,11 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin:1.9.3")
     implementation("com.squareup.moshi:moshi-adapters:1.9.2")
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.9.2")
+}
+
+fun getApiKey(): String {
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+    val keystoreProperties = Properties()
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+    return keystoreProperties["ACCESS_TOKEN"] as String
 }
