@@ -93,6 +93,11 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin:1.9.3")
     implementation("com.squareup.moshi:moshi-adapters:1.9.2")
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.9.2")
+
+    // Room
+    implementation("androidx.room:room-runtime:2.4.0")
+    implementation("androidx.room:room-ktx:2.4.0")
+    kapt("androidx.room:room-compiler:2.4.0")
 }
 
 fun getApiKey(): String {
