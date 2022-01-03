@@ -98,6 +98,10 @@ dependencies {
     implementation("androidx.room:room-runtime:2.4.0")
     implementation("androidx.room:room-ktx:2.4.0")
     kapt("androidx.room:room-compiler:2.4.0")
+    implementation("androidx.room:room-paging:2.4.0")
+
+    // Accompanist
+    implementation("com.google.accompanist:accompanist-permissions:0.22.0-rc")
 }
 
 fun getApiKey(): String {
