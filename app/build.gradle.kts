@@ -76,6 +76,7 @@ dependencies {
     // Paging
     implementation("androidx.paging:paging-runtime:3.1.0")
     implementation("androidx.paging:paging-compose:1.0.0-alpha14")
+    implementation("androidx.appcompat:appcompat:1.4.0")
     testImplementation("androidx.paging:paging-common:3.1.0")
 
     // OkHttp
@@ -102,6 +103,9 @@ dependencies {
 
     // Accompanist
     implementation("com.google.accompanist:accompanist-permissions:0.22.0-rc")
+
+    // Play Services Location
+    implementation("com.google.android.gms:play-services-location:19.0.0")
 }
 
 fun getApiKey(): String {
