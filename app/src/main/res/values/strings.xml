@@ -11,5 +11,6 @@
     <string name="location_permission_error">This application will not work without location permission</string>
     <string name="turn_on_gps">Please turn on location</string>
     <string name="places_app_bar_title">Places</string>
+    <string name="place_details_app_bar_title">Place Details</string>
     <string name="places_distance">%d meters away</string>
 </resources>
