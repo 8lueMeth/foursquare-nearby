@@ -106,6 +106,9 @@ dependencies {
 
     // Play Services Location
     implementation("com.google.android.gms:play-services-location:19.0.0")
+
+    // Coil
+    implementation("io.coil-kt:coil-compose:1.4.0")
 }
 
 fun getApiKey(): String {
