@@ -3,7 +3,6 @@ package com.example.nearbyfoursquare.ui.places.list
 import android.location.Location
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import androidx.paging.ExperimentalPagingApi
 import com.example.nearbyfoursquare.data.remote.repository.PlacesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -14,7 +13,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import javax.inject.Inject
 
 @ObsoleteCoroutinesApi
-@ExperimentalPagingApi
 @ExperimentalCoroutinesApi
 @HiltViewModel
 class PlacesViewModel @Inject constructor(

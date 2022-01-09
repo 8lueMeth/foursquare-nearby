@@ -16,7 +16,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.paging.ExperimentalPagingApi
 import coil.compose.rememberImagePainter
 import coil.transform.CircleCropTransformation
 import com.example.nearbyfoursquare.R
@@ -27,7 +26,6 @@ import com.example.nearbyfoursquare.util.Resource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
-@ExperimentalPagingApi
 @Composable
 fun PlaceDetailsScreen(placeDetailsViewModel: PlaceDetailsViewModel) {
     val place = placeDetailsViewModel.place?.observeAsState()
@@ -45,7 +43,6 @@ fun PlaceDetailsScreen(placeDetailsViewModel: PlaceDetailsViewModel) {
 }
 
 @ExperimentalCoroutinesApi
-@ExperimentalPagingApi
 @Composable
 fun PlaceDetailsSection(
     viewModel: PlaceDetailsViewModel,

@@ -70,6 +70,9 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.1.0-rc01")
     implementation("androidx.compose.ui:ui-tooling:1.0.5")
 
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
 

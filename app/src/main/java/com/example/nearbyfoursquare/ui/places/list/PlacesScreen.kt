@@ -34,7 +34,6 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.content.ContextCompat.startActivity
-import androidx.paging.ExperimentalPagingApi
 import coil.compose.rememberImagePainter
 import coil.transform.CircleCropTransformation
 import com.example.nearbyfoursquare.R
@@ -58,7 +57,6 @@ import kotlinx.coroutines.ObsoleteCoroutinesApi
 @ExperimentalPermissionsApi
 @ExperimentalCoroutinesApi
 @ExperimentalMaterialApi
-@ExperimentalPagingApi
 @Composable
 fun PlacesScreen(viewModel: PlacesViewModel, navigateToPlaceDetailsScreen: (String) -> Unit) {
     val context = LocalContext.current
@@ -130,7 +128,6 @@ fun PlacesScreen(viewModel: PlacesViewModel, navigateToPlaceDetailsScreen: (Stri
 @ExperimentalCoroutinesApi
 @ExperimentalMaterialApi
 @ObsoleteCoroutinesApi
-@ExperimentalPagingApi
 @ExperimentalPermissionsApi
 @Composable
 fun Permission(
@@ -218,7 +215,6 @@ fun Permission(
 
 @ExperimentalCoroutinesApi
 @ObsoleteCoroutinesApi
-@ExperimentalPagingApi
 @ExperimentalMaterialApi
 @Composable
 fun Places(

@@ -4,7 +4,6 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import androidx.paging.ExperimentalPagingApi
 import com.example.nearbyfoursquare.data.remote.repository.PlacesRepository
 import com.example.nearbyfoursquare.util.Refresh
 import com.example.nearbyfoursquare.util.Resource
@@ -16,7 +15,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@ExperimentalPagingApi
 @ExperimentalCoroutinesApi
 @HiltViewModel
 class PlaceDetailsViewModel @Inject constructor(

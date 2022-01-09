@@ -1,6 +1,5 @@
 package com.example.nearbyfoursquare.data.remote.repository
 
-import androidx.paging.ExperimentalPagingApi
 import androidx.room.withTransaction
 import com.example.nearbyfoursquare.data.local.PlacesDatabase
 import com.example.nearbyfoursquare.data.local.entity.PlaceDetailsEntity
@@ -11,7 +10,6 @@ import com.example.nearbyfoursquare.util.networkBoundResource
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-@ExperimentalPagingApi
 class PlacesRepository @Inject constructor(
     private val placesApiService: PlacesApiService,
     private val placesDatabase: PlacesDatabase,

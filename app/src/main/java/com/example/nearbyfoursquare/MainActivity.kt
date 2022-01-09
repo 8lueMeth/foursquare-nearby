@@ -11,7 +11,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.paging.ExperimentalPagingApi
 import com.example.nearbyfoursquare.ui.Screens
 import com.example.nearbyfoursquare.ui.places.detail.PlaceDetailsScreen
 import com.example.nearbyfoursquare.ui.places.detail.PlaceDetailsViewModel
@@ -26,7 +25,6 @@ import kotlinx.coroutines.ObsoleteCoroutinesApi
 @ObsoleteCoroutinesApi
 @ExperimentalCoroutinesApi
 @ExperimentalPermissionsApi
-@ExperimentalPagingApi
 @ExperimentalMaterialApi
 @ExperimentalComposeUiApi
 @AndroidEntryPoint
@@ -52,7 +50,6 @@ class MainActivity : ComponentActivity() {
 @ObsoleteCoroutinesApi
 @ExperimentalPermissionsApi
 @ExperimentalCoroutinesApi
-@ExperimentalPagingApi
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
 fun NavGraphBuilder.addPlacesScreen(
@@ -72,7 +69,6 @@ fun NavGraphBuilder.addPlacesScreen(
 }
 
 @ExperimentalCoroutinesApi
-@ExperimentalPagingApi
 fun NavGraphBuilder.addPlaceDetailsScreen(
     navController: NavHostController,
 ) {
