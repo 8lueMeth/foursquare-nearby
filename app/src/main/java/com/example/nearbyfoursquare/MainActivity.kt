@@ -13,6 +13,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.ExperimentalPagingApi
 import com.example.nearbyfoursquare.ui.Screens
+import com.example.nearbyfoursquare.ui.places.detail.PlaceDetailsScreen
+import com.example.nearbyfoursquare.ui.places.detail.PlaceDetailsViewModel
 import com.example.nearbyfoursquare.ui.places.list.PlacesScreen
 import com.example.nearbyfoursquare.ui.places.list.PlacesViewModel
 import com.example.nearbyfoursquare.ui.theme.NearbyFoursquareTheme
@@ -39,6 +41,7 @@ class MainActivity : ComponentActivity() {
                     startDestination = Screens.Places.route,
                     builder = {
                         addPlacesScreen(navController = navController)
+                        addPlaceDetailsScreen(navController = navController)
                     }
                 )
             }
@@ -59,6 +62,25 @@ fun NavGraphBuilder.addPlacesScreen(
         route = Screens.Places.route,
     ) {
         val viewModel: PlacesViewModel = hiltViewModel()
-        PlacesScreen(viewModel = viewModel)
+        PlacesScreen(
+            viewModel = viewModel,
+            navigateToPlaceDetailsScreen = { placeId ->
+                navController.navigate("${Screens.Details.route}/$placeId")
+            },
+        )
+    }
+}
+
+@ExperimentalCoroutinesApi
+@ExperimentalPagingApi
+fun NavGraphBuilder.addPlaceDetailsScreen(
+    navController: NavHostController,
+) {
+    composable(
+        route = Screens.Details.route + "/{placeId}",
+        arguments = Screens.Details.arguments,
+    ) {
+        val viewModel: PlaceDetailsViewModel = hiltViewModel()
+        PlaceDetailsScreen(placeDetailsViewModel = viewModel)
     }
 }
