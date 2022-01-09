@@ -19,6 +19,7 @@ inline fun <ResultType, RequestType> networkBoundResource(
             saveFetchResult(fetch())
             query().map { Resource.Success(it) }
         } catch (throwable: Throwable) {
+            throwable.printStackTrace()
             query().map { Resource.Error(throwable, it) }
         }
     } else {
