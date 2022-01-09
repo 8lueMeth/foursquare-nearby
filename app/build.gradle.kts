@@ -73,12 +73,6 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
 
-    // Paging
-    implementation("androidx.paging:paging-runtime:3.1.0")
-    implementation("androidx.paging:paging-compose:1.0.0-alpha14")
-    implementation("androidx.appcompat:appcompat:1.4.0")
-    testImplementation("androidx.paging:paging-common:3.1.0")
-
     // OkHttp
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
 
@@ -99,7 +93,6 @@ dependencies {
     implementation("androidx.room:room-runtime:2.4.0")
     implementation("androidx.room:room-ktx:2.4.0")
     kapt("androidx.room:room-compiler:2.4.0")
-    implementation("androidx.room:room-paging:2.4.0")
 
     // Accompanist
     implementation("com.google.accompanist:accompanist-permissions:0.22.0-rc")
