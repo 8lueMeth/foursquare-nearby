@@ -5,5 +5,5 @@ data class Categories(
     val name: String,
     val icon: Icon
 ) {
-    fun getIcon() = icon.prefix + icon.suffix
+    fun getIcon() = icon.prefix + "120" + icon.suffix
 }
