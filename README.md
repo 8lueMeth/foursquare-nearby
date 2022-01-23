@@ -1,4 +1,5 @@
 # NearbyForsquare
+An offline-first application wich uses foursquare places api to fetch nearby places around you based on your current lat/long. the list will only updates itself when you move at least 100 meters.
 
 ## Usage
 In order to make this application able to retrieve responses from foursquare api you need to generate a access token, create a text file named `keystore.properties` like below.
